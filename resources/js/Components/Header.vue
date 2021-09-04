@@ -4,11 +4,19 @@
             <div class="relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0">
                 <div class="container relative left-0 z-50 flex w-2/4 h-auto">
                     <div class="flex justify-center items-center w-6 h-full m-2">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 cursor-pointer text-gray-400 dark:text-white transition duration-500 ease-out" @click="abriMenu" :class="estadoMenuIcon ? 'rotate-180':''">
-                            <path fill="currentColor" d="M19,13H3V11H19L15,7L16.4,5.6L22.8,12L16.4,18.4L15,17L19,13M3,6H13V8H3V6M13,16V18H3V16H13Z"></path>
-                        </svg>
+                        <div class="hidden md:block">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 cursor-pointer text-gray-400 dark:text-white transition duration-500 ease-out" @click="abriMenu" :class="estadoMenuIcon ? 'rotate-180':''">
+                                <path fill="currentColor" d="M19,13H3V11H19L15,7L16.4,5.6L22.8,12L16.4,18.4L15,17L19,13M3,6H13V8H3V6M13,16V18H3V16H13Z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex md:hidden">
+                            <svg iewBox="0 0 20 20" class="w-6 h-6 cursor-pointer text-gray-400 dark:text-white" fill="currentColor" @click="emit('mobil')">
+                                <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+
                     </div>
-                    <div class="relative flex items-center w-full lg:w-64 h-full group">
+                    <!-- <div class="relative flex items-center w-full lg:w-64 h-full group">
                         <div class="absolute z-50 flex items-center justify-center w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer sm:hidden">
                             <svg fill="none" class="relative w-5 h-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                                 <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z">
@@ -24,15 +32,15 @@
                             +
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
                 <div class="relative p-1 flex items-center justify-end w-2/4 sm:mx-4">
                     <!-- Toggle dark mode -->
-                    <div class="mr-2">
+                    <div>
                         <DarkMode/>
                     </div>
                     <!-- Configuración de usuario -->
-                    <div class="ml-2 relative">
+                    <div class="ml-1 md:ml-2 relative">
                         <jet-dropdown align="right" width="48">
                             <template #trigger>
                                 <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
@@ -87,12 +95,16 @@ import JetDropdown from '@/Jetstream/Dropdown'
 import JetDropdownLink from '@/Jetstream/DropdownLink'
 import { Inertia } from '@inertiajs/inertia'
 import { ref } from 'vue'
-const emit = defineEmits(['menu'])
+const emit = defineEmits(['menu','mobil'])
 const estadoMenuIcon = ref(false)
 const abriMenu = () => {
     emit('menu')
     estadoMenuIcon.value = !estadoMenuIcon.value
 }
+
+// const abrirMenuMobil = () => {
+//     emit('mobil')
+// }
 
 const logout = () => {
     Inertia.post(route('logout'));

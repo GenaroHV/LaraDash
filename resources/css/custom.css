@@ -1,0 +1,14 @@
+@layer components {
+    .linkClass{
+        @apply font-thin uppercase flex items-center p-3 transition-colors duration-200 text-gray-500 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-500;
+    }
+    .linkClassActive{
+        @apply font-thin uppercase flex items-center p-3 transition-colors duration-200  text-blue-500 bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 dark:from-gray-700 dark:to-gray-800;
+    }
+    .tooltip {
+        @apply invisible absolute w-auto text-xs rounded shadow-lg p-1 bg-black text-gray-100 ml-14 normal-case;
+    }
+    .has-tooltip:hover .tooltip {
+        @apply visible z-50;
+    }
+}

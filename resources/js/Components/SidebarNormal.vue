@@ -1,46 +1,50 @@
 <template>
     <nav class="mt-6">
         <div>
-            <a class="w-16 font-thin uppercase text-blue-500 flex justify-center items-center p-4 my-2 transition-colors duration-200 bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 dark:from-gray-700 dark:to-gray-800" href="#">
+            <Link :href="route('dashboard')" class="w-16 justify-center has-tooltip"
+                :class="$page.url === '/dashboard' ? 'linkClassActive' : 'linkClass'">
+                <span class="text-left">
+                    <span class='tooltip'>Dashboard</span>
+                    <IconItem/>
+                </span>
+            </Link>
+            <Link class="w-16 justify-center has-tooltip linkClass" href="#">
+                <span class="text-left">
+                    <span class='tooltip'>Projects</span>
+                    <IconItem/>
+                </span>
+            </Link>
+            <Link class="w-16 justify-center linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
+            </Link>
+            <Link class="w-16 justify-center linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
+            </Link>
+            <Link class="w-16 justify-center linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
+            </Link>
+            <Link class="w-16 justify-center linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
+            </Link>
+            <Link class="w-16 justify-center linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
-                <span class="text-left">
-                    <IconItem/>
-                </span>
-            </a>
-            <a class="w-16 font-thin uppercase text-gray-500 dark:text-gray-200 flex justify-center items-center p-4 my-2 transition-colors duration-200 hover:text-blue-500" href="#">
-                <span class="text-left">
-                    <IconItem/>
-                </span>
-            </a>
+            </Link>
         </div>
     </nav>
 </template>
 
 <script setup>
+import { Link } from '@inertiajs/inertia-vue3';
 import IconItem from '@/Icons/Item'
 </script>
 
