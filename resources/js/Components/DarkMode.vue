@@ -19,35 +19,29 @@
         </div>
     </div>
 </template>
+<script setup>
+import { ref, onMounted } from 'vue'
+const theme = ref('')
 
-<script>
-export default {
-    data(){
-        return {
-            theme: ''
-        }
-    },
-    mounted () {
-        const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        const defaultTheme = userPrefersDark ? 'dark' : 'light'
-        const theme = localStorage.getItem('theme') || defaultTheme
-        this.setTheme(theme)
-    },
-    methods: {
-        toggleTheme () {
-            const newTheme = this.theme === 'light' ? 'dark' : 'light'
-            this.setTheme(newTheme)
-        },
-        setTheme (newTheme) {
-            this.theme = newTheme
-            if (this.theme === 'dark') {
-                document.documentElement.classList.add('dark')
-            } else {
-                document.documentElement.classList.remove('dark')
-            }
-            localStorage.setItem('theme', newTheme)
-        }
+onMounted(() => {
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    const defaultTheme = userPrefersDark ? 'dark' : 'light'
+    theme.value = localStorage.getItem('theme') || defaultTheme
+    setTheme(theme.value)
+})
+
+const toggleTheme = () => {
+    const newTheme = theme.value === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+}
+const setTheme = (newTheme) => {
+    theme.value= newTheme
+    if (theme.value === 'dark') {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
     }
+    localStorage.setItem('theme', newTheme)
 }
 </script>
 
