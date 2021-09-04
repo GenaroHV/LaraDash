@@ -15,14 +15,15 @@
         "@inertiajs/progress": "^0.2.6",
         "@tailwindcss/forms": "^0.2.1",
         "@tailwindcss/typography": "^0.3.0",
-        "@vue/compiler-sfc": "^3.0.5",
+        "@vue/compiler-sfc": "^3.2.0",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^12.0.1",
         "tailwindcss": "^2.0.1",
-        "vue": "^3.0.5",
+        "vue": "^3.2.0",
         "vue-loader": "^16.1.2"
-    }
+    },
+    "dependencies": {}
 }
