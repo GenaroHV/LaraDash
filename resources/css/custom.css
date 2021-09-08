@@ -11,4 +11,47 @@
     .has-tooltip:hover .tooltip {
         @apply visible z-50;
     }
+    .laradash-label{
+        @apply text-xs text-gray-700 dark:text-gray-400;
+    }
+    .laradash-input{
+        @apply block w-full mt-1 px-3 py-2 text-xs text-black bg-gray-50 dark:bg-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm rounded-md;
+    }
+    .btn-blue{
+        @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-700 hover:bg-blue-800 focus:outline-none;
+    }
+    .btn-red{
+        @apply flex px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-700 hover:bg-red-800 focus:outline-none;
+    }
+    .btn-green{
+        @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-700 hover:bg-green-800 focus:outline-none;
+    }
+}
+
+main::-webkit-scrollbar {
+    width: 6px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+main::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background: #948e8e;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+main::-webkit-scrollbar-track {
+    background: #575f72;
+    border-radius: 4px;
+}
+
+main::-webkit-scrollbar-track:hover,
+main::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
 }

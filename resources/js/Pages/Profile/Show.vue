@@ -1,10 +1,10 @@
 <template>
-    <app-layout title="Profile">
-        <template #header>
+    <LaraDashLayout>
+        <!-- <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Profile
             </h2>
-        </template>
+        </template> -->
 
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
@@ -35,12 +35,12 @@
                 </template>
             </div>
         </div>
-    </app-layout>
+    </LaraDashLayout>
 </template>
 
 <script>
     import { defineComponent } from 'vue'
-    import AppLayout from '@/Layouts/AppLayout.vue'
+    import LaraDashLayout from '@/Layouts/Laradash'
     import DeleteUserForm from '@/Pages/Profile/Partials/DeleteUserForm.vue'
     import JetSectionBorder from '@/Jetstream/SectionBorder.vue'
     import LogoutOtherBrowserSessionsForm from '@/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue'
@@ -52,7 +52,7 @@
         props: ['sessions'],
 
         components: {
-            AppLayout,
+            LaraDashLayout,
             DeleteUserForm,
             JetSectionBorder,
             LogoutOtherBrowserSessionsForm,

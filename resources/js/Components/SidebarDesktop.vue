@@ -1,7 +1,6 @@
 <template>
     <nav class="mt-6">
-        <div>
-            <p class="p-3 text-xs uppercase text-gray-400">General</p>
+        <div class="flex flex-col w-full">
             <Link :href="route('dashboard')" class="w-full justify-start"
                 :class="$page.url === '/dashboard' ? 'linkClassActive' : 'linkClass'">
                 <span class="text-left">
@@ -11,12 +10,13 @@
                     Dashboard
                 </span>
             </Link>
+            <p class="p-3 text-xs uppercase text-gray-400">EXAMPLES</p>
             <Link class="w-full justify-start linkClass" href="#">
                 <span class="text-left">
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    Projects
+                    CHARTS
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -24,7 +24,7 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    My tasks
+                    CALENDARIO
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -32,7 +32,16 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    Calendar
+                    PUNTO DE VENTA
+                </span>
+            </Link>
+            <p class="p-3 text-xs uppercase text-gray-400">CRUD</p>
+            <Link class="w-full justify-start linkClass" href="#">
+                <span class="text-left">
+                    <IconItem/>
+                </span>
+                <span class="mx-4 text-xs font-normal">
+                    CRUD INERTIA JS
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -40,16 +49,7 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    Time manage
-                </span>
-            </Link>
-            <p class="p-3 text-xs uppercase text-gray-400">Reportes</p>
-            <Link class="w-full justify-start linkClass" href="#">
-                <span class="text-left">
-                    <IconItem/>
-                </span>
-                <span class="mx-4 text-xs font-normal">
-                    Reports
+                    CRUD VUE JS 3.2
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -57,7 +57,34 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    Settings
+                    CRUD VUE JS REFACTOR
+                </span>
+            </Link>
+            <p class="p-3 text-xs uppercase text-gray-400">Others</p>
+            <Link class="w-full justify-start linkClass" href="#">
+                <span class="text-left">
+                    <IconItem/>
+                </span>
+                <span class="mx-4 text-xs font-normal">
+                    Users
+                </span>
+            </Link>
+            <Link :href="route('roles.index')" class="w-full justify-start"
+                :class="$page.url === '/roles' ? 'linkClassActive' : 'linkClass'">
+                <span class="text-left">
+                    <IconItem/>
+                </span>
+                <span class="mx-4 text-xs font-normal">
+                    Roles
+                </span>
+            </Link>
+            <Link :href="route('permisos.ver')" class="w-full justify-start"
+                :class="$page.url === '/permisos' ? 'linkClassActive' : 'linkClass'">
+                <span class="text-left">
+                    <IconItem/>
+                </span>
+                <span class="mx-4 text-xs font-normal">
+                    Permisos
                 </span>
             </Link>
         </div>
