@@ -61,12 +61,13 @@
                 </span>
             </Link>
             <p class="p-3 text-xs uppercase text-gray-400">Others</p>
-            <Link class="w-full justify-start linkClass" href="#">
+            <Link :href="route('usuarios.index')" class="w-full justify-start"
+                :class="$page.url === '/usuarios' ? 'linkClassActive' : 'linkClass'">
                 <span class="text-left">
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    Users
+                    Usuarios
                 </span>
             </Link>
             <Link :href="route('roles.index')" class="w-full justify-start"

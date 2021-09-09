@@ -12,9 +12,7 @@
             <!-- Profile Photo -->
             <div class="col-span-6 sm:col-span-4" v-if="$page.props.jetstream.managesProfilePhotos">
                 <!-- Profile Photo File Input -->
-                <input type="file" class="hidden"
-                            ref="photo"
-                            @change="updatePhotoPreview">
+                <input type="file" class="hidden" ref="photo" @change="updatePhotoPreview">
 
                 <jet-label for="photo" value="Photo" />
 

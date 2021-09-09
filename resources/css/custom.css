@@ -26,6 +26,12 @@
     .btn-green{
         @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-700 hover:bg-green-800 focus:outline-none;
     }
+    .btn-yellow{
+        @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-yellow-600 border border-transparent rounded-lg active:bg-yellow-700 hover:bg-yellow-800 focus:outline-none;
+    }
+    .btn-gray{
+        @apply px-4 py-2 text-sm font-medium leading-5 dark:text-white transition-colors duration-150 dark:bg-gray-600 border dark:border-transparent border-gray-300 hover:bg-gray-200 active:bg-gray-400 rounded-lg dark:active:bg-gray-700 dark:hover:bg-gray-800 focus:outline-none;
+    }
 }
 
 main::-webkit-scrollbar {

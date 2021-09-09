@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-hidden shadow-lg rounded-2xl">
         <div class="w-full overflow-x-auto">
             <table class="w-full whitespace-no-wrap">
                 <thead>
