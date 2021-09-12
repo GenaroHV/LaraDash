@@ -14,12 +14,31 @@ use Spatie\Permission\Models\Role;
 
 class UsuariosController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $this->authorize('view', User::class);
-        $usuarios = User::all();
+        $key = $request->buscar;
+        $usuarios = $this->realizarBusqueda($key);
         return Inertia::render('Otros/Usuarios/Usuarios', [
-            'usuarios' => $usuarios
+            'usuarios' => $usuarios,
+            'filtro' => $request->buscar
         ]);
+    }
+
+    public function store(UserRequest $request){
+        $this->authorize('create', new User);
+        $usuario = new User;
+        $usuario->name = $request->name;
+        $usuario->email = $request->email;
+        $usuario->password = bcrypt($request->password);
+        $usuario->save();
+        return redirect()->back()->with('success', 'Usuario creado con éxito');
+    }
+
+    public function destroy($id){
+        $user = User::findOrFail($id);
+        $this->authorize('delete', $user);
+        $user->delete();
+        return redirect()->back()->with('success', 'Usuario eliminado con éxito');
     }
 
     public function miPerfil($id){
@@ -101,6 +120,17 @@ class UsuariosController extends Controller
             return redirect()->back()->with('success', 'La contraseña ha sido actualizada');
         }else{
             return redirect()->back()->with('error', 'Las contraseñas no son iguales');
+        }
+    }
+
+    private function realizarBusqueda($key){
+        if($key){
+            $usuarios = User::filtro($key)->paginate(10);
+            $usuarios->appends(['buscar' => $key]);
+            return $usuarios;
+        }else{
+            $usuarios = User::paginate(10);
+            return $usuarios;
         }
     }
 }

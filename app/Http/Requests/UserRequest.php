@@ -26,7 +26,8 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => ['required', Rule::unique('users')->ignore($this->route('user'))],
+            // 'email' => ['required', Rule::unique('users')->ignore($this->route('usuarios'))],
+            'email' => 'required|email:rfc,dns|unique:users',
             'profile_photo_path' => 'mimes:png,jpg',
             'password' => 'required|min:8'
         ];

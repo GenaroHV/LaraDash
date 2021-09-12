@@ -62,4 +62,17 @@ class User extends Authenticatable
     ];
 
     protected $with = ['roles','permissions'];
+
+    public function scopeFiltros($query, array $filtros){
+        $query->when($filtros['name'] ?? null, function ($query,$name){
+            return $query->where('name', $name);
+        })->when($filtros['email'] ?? null, function ($query,$email){
+            return $query->where('email', $email);
+        });
+    }
+
+    public function scopeFiltro($query, $key){
+        return $query->orWhere('name', 'LIKE', "%{$key}%")
+                ->orWhere('email', 'LIKE', "%{$key}%");
+    }
 }

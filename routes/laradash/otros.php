@@ -7,7 +7,7 @@ Route::get('permisos', [Laradash\PermisosController::class, 'index'])->name('per
 
 Route::resource('roles', Laradash\RolesController::class)->names('roles')->except(['create','edit','show']);
 
-Route::resource('usuarios', Laradash\UsuariosController::class)->names('usuarios')->except(['create','edit', 'show']);
+Route::resource('usuarios', Laradash\UsuariosController::class)->names('usuarios')->only(['index','store','destroy']);
 
 Route::get('usuario/perfil/{id}', [Laradash\UsuariosController::class, 'miPerfil'])->name('usuario.perfil');
 Route::post('usuario/perfil', [Laradash\UsuariosController::class, 'actualizarPerfil'])->name('usuario.perfil.actualizar');
