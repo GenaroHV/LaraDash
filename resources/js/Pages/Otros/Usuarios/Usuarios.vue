@@ -3,7 +3,7 @@
         <Head title="Usuarios"/>
         <div class="flex justify-between mb-2">
             <h2 class="dark:text-white">Usuarios</h2>
-            <button v-role="'admin'" class="btn-blue">Crear</button>
+            <button v-role="'super admin'" class="btn-blue">Crear</button>
         </div>
         <LaraDashTable class="mb-6">
             <template #col>
@@ -24,10 +24,9 @@
                         </span>
                     </td>
                     <td class="px-4 py-1 text-xs">
-                        <a class="mx-1" :href="route('usuario.perfil', {id: u.id})">
-                            ver
-                        </a>
-                        <span class="mx-1">editar</span>
+                        <Link class="mx-1" :href="route('usuario.perfil', {id: u.id})">
+                            editar
+                        </Link>
                         <span class="mx-1">eliminar</span>
                     </td>
                 </tr>

@@ -24,8 +24,8 @@
                         </span>
                     </td>
                     <td class="px-4 py-1 text-xs flex justify-between w-32">
-                        <button class="btn-green-rounded" @click="modalEditarRole(r)">U</button>
-                        <button class="btn-red-rounded" @click="eliminarRol(r.id)">D</button>
+                        <button class="hover:text-blue-600" @click="modalEditarRole(r)">Editar</button>
+                        <button class="hover:text-red-600" @click="eliminarRol(r.id)">Eliminar</button>
                     </td>
                 </tr>
             </template>

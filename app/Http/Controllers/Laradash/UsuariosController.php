@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Laradash;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -14,6 +15,7 @@ use Spatie\Permission\Models\Role;
 class UsuariosController extends Controller
 {
     public function index(){
+        $this->authorize('view', User::class);
         $usuarios = User::all();
         return Inertia::render('Otros/Usuarios/Usuarios', [
             'usuarios' => $usuarios
@@ -21,6 +23,7 @@ class UsuariosController extends Controller
     }
 
     public function miPerfil($id){
+        $this->authorize('view', User::class);
         $user = User::where('id', $id)->get();
         $roles = Role::select('id','name','guard_name')->with('permissions')->orderBy('id')->get();
         $permissions = Permission::select('id','name')->get();
@@ -31,7 +34,8 @@ class UsuariosController extends Controller
         ]);
     }
 
-    public function actualizarPerfil(Request $request){
+    public function actualizarPerfil(User $user, UserRequest $request){
+        $this->authorize('update', $user);
         $requestUser = $request->formUsuario;
         $usuario = User::find($requestUser['id']);
         $usuario->name = $requestUser['name'];
@@ -52,6 +56,7 @@ class UsuariosController extends Controller
     public function eliminarFoto(Request $request){
         $requestUser = $request->formUsuario;
         $usuario = User::find($requestUser['id']);
+        $this->authorize('delete', $usuario);
         Storage::delete($usuario->profile_photo_path);
         $usuario->profile_photo_path = NULL;
         $usuario->save();

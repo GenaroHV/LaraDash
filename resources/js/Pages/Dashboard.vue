@@ -7,5 +7,5 @@
 
 <script setup>
     import LaraDashLayout from '@/Layouts/Laradash'
-    import { Head } from '@inertiajs/inertia-vue3';
+    import { Head } from '@inertiajs/inertia-vue3'
 </script>

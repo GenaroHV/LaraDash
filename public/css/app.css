@@ -2396,6 +2396,14 @@ main::-webkit-scrollbar-track:active {
 	--tw-text-opacity: 1 !important;
 	color: rgba(17, 24, 39, var(--tw-text-opacity)) !important;
 }
+.hover\:text-blue-600:hover {
+	--tw-text-opacity: 1 !important;
+	color: rgba(37, 99, 235, var(--tw-text-opacity)) !important;
+}
+.hover\:text-red-600:hover {
+	--tw-text-opacity: 1 !important;
+	color: rgba(220, 38, 38, var(--tw-text-opacity)) !important;
+}
 .focus\:z-10:focus {
 	z-index: 10 !important;
 }
