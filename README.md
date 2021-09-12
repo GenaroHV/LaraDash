@@ -57,16 +57,4 @@ Lara<span style="color: #3B82F6;">Dash</span> es un proyecto open source desarro
 ## Apoya el proyecto
 Hola devs 👋, gracias por considerar hacer una donación, para poder seguir trabajando en contribuir en futuras actualizaciones del proyecto.
 
-<a href="https://www.buymeacoffee.com/genarohernandez"><img src="https://img.buymeacoffee.com/button-api/?text=Cómprame un café&emoji=&slug=genarohernandez&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
-<style>
-    a{
-        color: #3B82F6;
-    }
-    a:hover{
-        color: blue;
-    }
-    h2{
-        font-weight: bold;
-        color: #3B82F6;
-    }
-</style>
+<a href="https://www.buymeacoffee.com/genarohernandez" taget="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Cómprame un café&emoji=&slug=genarohernandez&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
