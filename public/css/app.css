@@ -1261,7 +1261,6 @@ select {
 	background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
 }
 .btn-red {
-	display: flex;
 	border-radius: 0.5rem;
 	border-width: 1px;
 	border-color: transparent;
@@ -1293,39 +1292,6 @@ select {
 .btn-red:active {
 	--tw-bg-opacity: 1;
 	background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
-}
-.btn-green {
-	border-radius: 0.5rem;
-	border-width: 1px;
-	border-color: transparent;
-	--tw-bg-opacity: 1;
-	background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
-	font-size: 0.875rem;
-	line-height: 1.25rem;
-	font-weight: 500;
-	line-height: 1.25rem;
-	--tw-text-opacity: 1;
-	color: rgba(255, 255, 255, var(--tw-text-opacity));
-	transition-property: background-color, border-color, color, fill, stroke;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-	transition-duration: 150ms;
-}
-.btn-green:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
-}
-.btn-green:focus {
-	outline: 2px solid transparent;
-	outline-offset: 2px;
-}
-.btn-green:active {
-	--tw-bg-opacity: 1;
-	background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
 }
 .btn-gray {
 	border-radius: 0.5rem;
@@ -1372,6 +1338,72 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
+.btn-red-rounded {
+	border-radius: 9999px;
+	border-width: 1px;
+	border-color: transparent;
+	--tw-bg-opacity: 1;
+	background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+	transition-property: background-color, border-color, color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	transition-duration: 150ms;
+}
+.btn-red-rounded:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(153, 27, 27, var(--tw-bg-opacity));
+}
+.btn-red-rounded:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+.btn-red-rounded:active {
+	--tw-bg-opacity: 1;
+	background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+}
+.btn-green-rounded {
+	border-radius: 9999px;
+	border-width: 1px;
+	border-color: transparent;
+	--tw-bg-opacity: 1;
+	background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+	transition-property: background-color, border-color, color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	transition-duration: 150ms;
+}
+.btn-green-rounded:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+}
+.btn-green-rounded:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+.btn-green-rounded:active {
+	--tw-bg-opacity: 1;
+	background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+}
 .fixed {
 	position: fixed !important;
 }
@@ -1414,9 +1446,6 @@ select {
 .m-2 {
 	margin: 0.5rem !important;
 }
-.m-1 {
-	margin: 0.25rem !important;
-}
 .mx-auto {
 	margin-left: auto !important;
 	margin-right: auto !important;
@@ -1432,10 +1461,6 @@ select {
 .my-3 {
 	margin-top: 0.75rem !important;
 	margin-bottom: 0.75rem !important;
-}
-.my-1 {
-	margin-top: 0.25rem !important;
-	margin-bottom: 0.25rem !important;
 }
 .ml-3 {
 	margin-left: 0.75rem !important;
@@ -1514,12 +1539,6 @@ select {
 }
 .mr-1 {
 	margin-right: 0.25rem !important;
-}
-.mb-1 {
-	margin-bottom: 0.25rem !important;
-}
-.\!mb-2 {
-	margin-bottom: 0.5rem !important;
 }
 .block {
 	display: block !important;
@@ -1910,10 +1929,6 @@ select {
 	--tw-bg-opacity: 1 !important;
 	background-color: rgba(209, 213, 219, var(--tw-bg-opacity)) !important;
 }
-.bg-gray-600 {
-	--tw-bg-opacity: 1 !important;
-	background-color: rgba(75, 85, 99, var(--tw-bg-opacity)) !important;
-}
 .bg-opacity-25 {
 	--tw-bg-opacity: 0.25 !important;
 }
@@ -2006,14 +2021,6 @@ select {
 .py-10 {
 	padding-top: 2.5rem !important;
 	padding-bottom: 2.5rem !important;
-}
-.\!py-1 {
-	padding-top: 0.25rem !important;
-	padding-bottom: 0.25rem !important;
-}
-.\!px-2 {
-	padding-left: 0.5rem !important;
-	padding-right: 0.5rem !important;
 }
 .pt-6 {
 	padding-top: 1.5rem !important;
@@ -2211,10 +2218,6 @@ select {
 .text-yellow-500 {
 	--tw-text-opacity: 1 !important;
 	color: rgba(245, 158, 11, var(--tw-text-opacity)) !important;
-}
-.\!text-black {
-	--tw-text-opacity: 1 !important;
-	color: rgba(0, 0, 0, var(--tw-text-opacity)) !important;
 }
 .underline {
 	text-decoration: underline !important;
@@ -2546,14 +2549,6 @@ main::-webkit-scrollbar-track:active {
 .dark .dark\:text-gray-300 {
 	--tw-text-opacity: 1 !important;
 	color: rgba(209, 213, 219, var(--tw-text-opacity)) !important;
-}
-.dark .dark\:text-gray-600 {
-	--tw-text-opacity: 1 !important;
-	color: rgba(75, 85, 99, var(--tw-text-opacity)) !important;
-}
-.dark .dark\:text-gray-500 {
-	--tw-text-opacity: 1 !important;
-	color: rgba(107, 114, 128, var(--tw-text-opacity)) !important;
 }
 .dark .dark\:hover\:bg-gray-600:hover {
 	--tw-bg-opacity: 1 !important;

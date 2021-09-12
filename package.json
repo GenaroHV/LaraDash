@@ -25,5 +25,7 @@
         "vue": "^3.2.0",
         "vue-loader": "^16.1.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "vue-gates": "^2.1.2"
+    }
 }

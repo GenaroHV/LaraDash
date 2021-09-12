@@ -3,7 +3,7 @@
         <Head title="Usuarios"/>
         <div class="flex justify-between mb-2">
             <h2 class="dark:text-white">Usuarios</h2>
-            <button class="btn-blue">Crear</button>
+            <button v-role="'admin'" class="btn-blue">Crear</button>
         </div>
         <LaraDashTable class="mb-6">
             <template #col>
@@ -39,7 +39,7 @@
 <script setup>
     // importaciones
     import LaraDashLayout from '@/Layouts/Laradash'
-    import { Head, Link } from '@inertiajs/inertia-vue3';
+    import { Head, Link } from '@inertiajs/inertia-vue3'
     import LaraDashTable from '@/Components/Table'
     // declaraciones
     const props = defineProps({
@@ -47,7 +47,3 @@
     })
     const usuarios = props.usuarios
 </script>
-
-<style>
-
-</style>

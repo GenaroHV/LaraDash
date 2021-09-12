@@ -21,7 +21,7 @@
         @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-700 hover:bg-blue-800 focus:outline-none;
     }
     .btn-red{
-        @apply flex px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-700 hover:bg-red-800 focus:outline-none;
+        @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-700 hover:bg-red-800 focus:outline-none;
     }
     .btn-green{
         @apply px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-lg active:bg-green-700 hover:bg-green-800 focus:outline-none;
@@ -31,6 +31,21 @@
     }
     .btn-gray{
         @apply px-4 py-2 text-sm font-medium leading-5 dark:text-white transition-colors duration-150 dark:bg-gray-600 border dark:border-transparent border-gray-300 hover:bg-gray-200 active:bg-gray-400 rounded-lg dark:active:bg-gray-700 dark:hover:bg-gray-800 focus:outline-none;
+    }
+    .btn-blue-rounded{
+        @apply px-3 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-full active:bg-blue-700 hover:bg-blue-800 focus:outline-none;
+    }
+    .btn-red-rounded{
+        @apply px-3 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-full active:bg-red-700 hover:bg-red-800 focus:outline-none;
+    }
+    .btn-green-rounded{
+        @apply px-3 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-full active:bg-green-700 hover:bg-green-800 focus:outline-none;
+    }
+    .btn-yellow-rounded{
+        @apply px-3 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-yellow-600 border border-transparent rounded-full active:bg-yellow-700 hover:bg-yellow-800 focus:outline-none;
+    }
+    .btn-gray-rounded{
+        @apply px-3 py-2 text-sm font-medium leading-5 dark:text-white transition-colors duration-150 dark:bg-gray-600 border dark:border-transparent border-gray-300 hover:bg-gray-200 active:bg-gray-400 rounded-full dark:active:bg-gray-700 dark:hover:bg-gray-800 focus:outline-none;
     }
 }
 

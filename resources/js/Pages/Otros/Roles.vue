@@ -3,7 +3,7 @@
         <Head title="Roles"/>
         <div class="flex justify-between mb-2">
             <h2 class="dark:text-white">Roles</h2>
-            <button class="btn-blue" @click="modalCrearRol">Crear</button>
+            <button class="btn-blue" v-role="'admin'" @click="modalCrearRol">Crear</button>
         </div>
         <LaraDashTable class="mb-6">
             <template #col>
@@ -24,8 +24,8 @@
                         </span>
                     </td>
                     <td class="px-4 py-1 text-xs flex justify-between w-32">
-                        <button class="btn-green" @click="modalEditarRole(r)">U</button>
-                        <button class="btn-red" @click="eliminarRol(r.id)">D</button>
+                        <button class="btn-green-rounded" @click="modalEditarRole(r)">U</button>
+                        <button class="btn-red-rounded" @click="eliminarRol(r.id)">D</button>
                     </td>
                 </tr>
             </template>
