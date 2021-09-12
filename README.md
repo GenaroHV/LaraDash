@@ -1,6 +1,4 @@
-<center>
-<h1 style="font-weight: bold;">Lara<span style="color: #3B82F6;">Dash</span></h1>
-</center>
+<h1 align="center" style="font-weight: bold;">Lara<span style="color: #3B82F6 !important;">Dash</span></h1>
 
 ## ¿Qué es LaraDash?
 
