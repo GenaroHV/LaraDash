@@ -2,9 +2,12 @@
     <LaraDashLayout>
         <Head title="Roles"/>
         <div class="flex justify-between mb-2">
-            <h2 class="dark:text-white">Roles</h2>
-            <button class="btn-blue" v-role="'admin'" @click="modalCrearRol">Crear</button>
+            <h2 class="my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200">
+                Roles
+            </h2>
+            <button v-role="'super admin'" @click="modalCrearRol" class="btn-blue my-2">+</button>
         </div>
+        <GitHub/>
         <LaraDashTable class="mb-6">
             <template #col>
                 <th class="px-4 py-3 text-xs">ID</th>
@@ -24,8 +27,14 @@
                         </span>
                     </td>
                     <td class="px-4 py-1 text-xs flex justify-between w-32">
-                        <button class="hover:text-blue-600" @click="modalEditarRole(r)">Editar</button>
-                        <button class="hover:text-red-600" @click="eliminarRol(r.id)">Eliminar</button>
+                        <template v-if="r.id === 1">
+                            <button v-role="'super admin'" class="hover:text-blue-600" @click="modalEditarRole(r)">Editar</button>
+                            <button v-role="'super admin'" class="hover:text-red-600" @click="eliminarRol(r.id)">Eliminar</button>
+                        </template>
+                        <template v-else>
+                            <button class="hover:text-blue-600" @click="modalEditarRole(r)">Editar</button>
+                            <button class="hover:text-red-600" @click="eliminarRol(r.id)">Eliminar</button>
+                        </template>
                     </td>
                 </tr>
             </template>
@@ -92,6 +101,7 @@
     import { Head } from '@inertiajs/inertia-vue3'
     import LaraDashTable from '@/Components/Table'
     import JetDialogModal from '@/Jetstream/DialogModal'
+    import GitHub from '@/Components/GitHub'
     import { ref, toRefs, computed } from 'vue'
     import { Inertia } from '@inertiajs/inertia'
     import { useForm, usePage } from '@inertiajs/inertia-vue3'

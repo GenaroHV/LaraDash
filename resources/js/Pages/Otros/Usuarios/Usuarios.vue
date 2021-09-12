@@ -2,9 +2,12 @@
     <LaraDashLayout>
         <Head title="Usuarios"/>
         <div class="flex justify-between mb-2">
-            <h2 class="dark:text-white">Usuarios</h2>
-            <button v-role="'super admin'" class="btn-blue">Crear</button>
+            <h2 class="my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200">
+                Usuarios
+            </h2>
+            <button v-role="'super admin'" class="btn-blue my-2">+</button>
         </div>
+        <GitHub/>
         <LaraDashTable class="mb-6">
             <template #col>
                 <th class="px-4 py-3 text-xs">ID</th>
@@ -24,10 +27,18 @@
                         </span>
                     </td>
                     <td class="px-4 py-1 text-xs">
-                        <Link class="mx-1" :href="route('usuario.perfil', {id: u.id})">
-                            editar
-                        </Link>
-                        <span class="mx-1">eliminar</span>
+                        <template v-if="u.id === 1">
+                            <Link v-role="'super admin'" class="mx-1" :href="route('usuario.perfil', {id: u.id})">
+                                editar
+                            </Link>
+                            <span v-role="'super admin'" class="mx-1">eliminar</span>
+                        </template>
+                        <template v-else>
+                            <Link class="mx-1" :href="route('usuario.perfil', {id: u.id})">
+                                editar
+                            </Link>
+                            <span class="mx-1">eliminar</span>
+                        </template>
                     </td>
                 </tr>
             </template>
@@ -40,6 +51,7 @@
     import LaraDashLayout from '@/Layouts/Laradash'
     import { Head, Link } from '@inertiajs/inertia-vue3'
     import LaraDashTable from '@/Components/Table'
+    import GitHub from '@/Components/GitHub'
     // declaraciones
     const props = defineProps({
         usuarios: Object

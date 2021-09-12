@@ -1,7 +1,12 @@
 <template>
     <LaraDashLayout>
         <Head title="Mi perfil"/>
-        <h2 class="my-3 text-2xl font-semibold text-gray-700 dark:text-white">Mi Perfil</h2>
+        <div class="flex justify-between mb-2">
+            <h2 class="my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200">
+                Mi Perfil
+            </h2>
+        </div>
+        <GitHub/>
         <div class="flex flex-col flex-wrap sm:flex-row">
             <!-- Perfil -->
             <div class="w-full sm:w-1/2 xl:w-1/4">
@@ -112,6 +117,7 @@
 <script setup>
     import LaraDashLayout from '@/Layouts/Laradash'
     import { Head, useForm } from '@inertiajs/inertia-vue3'
+    import GitHub from '@/Components/GitHub'
     import { Inertia } from '@inertiajs/inertia'
     import { ref, toRefs, onMounted, watch } from 'vue'
     const props = defineProps({

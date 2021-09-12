@@ -36,7 +36,7 @@ import LaraHeader from '@/Components/Header'
 import { Link } from '@inertiajs/inertia-vue3'
 import { ref } from 'vue'
 
-const estadoMenu = ref(false)
+const estadoMenu = ref(true)
 const estadoMenuMobil = ref(false)
 
 const abrirMenu = () => {

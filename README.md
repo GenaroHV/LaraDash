@@ -1,12 +1,14 @@
-# LaraDash
+<center>
+<h1 style="font-weight: bold;">Lara<span style="color: #3B82F6;">Dash</span></h1>
+</center>
 
 ## ¿Qué es LaraDash?
 
-LaraDash es sistema administrativo construido bajo el framework Laravel en su última versión, nació para ser la partida de cualquier proyecto que tengan en mente. Con grandes herramientas que se necesita en todo proyecto.
+Lara<span style="color: #3B82F6;">Dash</span> es un sistema administrativo construido bajo el framework Laravel, nació para ser la partida de cualquier proyecto que tengan en mente. Con grandes herramientas que se necesita en todo proyecto.
 
 ## Stack LaraDash
 
-LaraDash utliza las tecnologías recomendadas por el propio Taylor Otwell.
+Lara<span style="color: #3B82F6;">Dash</span> utliza las tecnologías recomendadas por el propio **[Taylor Otwell](https://twitter.com/taylorotwell)**.
 
 ### Tecnologías:
 
@@ -18,26 +20,53 @@ LaraDash utliza las tecnologías recomendadas por el propio Taylor Otwell.
 
 ## ¿En qué me puede ayudar LaraDash?
 
-LaraDash no solo es un sistema administrativo construido con las tecnologías mencionadas. Además te ofrece:
+Lara<span style="color: #3B82F6;">Dash</span> no solo es una plantilla UI construido con las tecnologías mencionadas. Además te ofrece los superpoderes que todo proyecto mediano o grande tiene que tener por obligación:
 
-- Modo Light & Dark
-- CRUD construído con Inertia.js
-- CRUD construído con Vue.js 3.2
-- CRUD construído con Vue.js 3.2 refactorizado (composables)
+- Modo claro y oscuro
 - Iniciar sesión mediante usuario o correo.
-- Sistema de Roles y Permisos
-- Filtros de búsqueda y paginación
 - Mensajes Flash
 - Validación de formularios
-- Importación y Exportación de archivos Excel
-- Generación de reportes en PDF
-- Gráficos estadísticos
+- CRUD con Inertia.js
+- CRUD con Vue.js 3.2
+- CRUD con Vue.js 3.2 refactorizado
+- Sistema de Roles y Permisos
+- Filtros de búsqueda y paginación *(pendiente)*
+- Importación y Exportación de archivos Excel *(pendiente)*
+- Generación de reportes en PDF *(pendiente)*
+- Gráficos estadísticos *(pendiente)*
+
+## Instalación
+
+Solo debes de clonar el proyecto Lara<span style="color: #3B82F6;">Dash</span> o utilizar los componentes que necesitas.
+
+> git clone https://github.com/GenaroHV/LaraDash.git
+
+## Créditos
+
+Lara<span style="color: #3B82F6;">Dash</span> no hubiera sido posible sin la necesidad de tener un proyecto base en el cual empezar a construir cada imaginación.
 
 ## [Genaro Hernández](https://genarohernandez.pro/)
 
-Soy un programador backend y frontend. Escribo sobre programación web, aplicaciones móviles y software de escritorio en [mi blog](https://genarohernandez.pro/blog). Si tienes alguna duda sobre como utilizar **LaraDash** no olvides de escribirme.
+Soy un programador con conociemientos en backend y frontend, feliz de utilizar <span style="color: #E64B4B;font-weight: bold;">Laravel</span> & <span style="color: #4BE65B;font-weight: bold;">Vuejs</span> en cada nuevo proyecto. Escribo sobre programación web, aplicaciones móviles y software de escritorio en [mi blog](https://genarohernandez.pro/blog). Si tienes alguna duda sobre como utilizar **Lara<span style="color: #3B82F6;">Dash</span>** no olvides en escribirme.
 
 
 ## Licencia
 
-El sistema LaraDash es [MIT](https://opensource.org/licenses/MIT). Utilizalo a tu gusto, si deseas puedes aportar con un incentivo para seguir trabajando en actualizaciones futuras a LaraDash.
+Lara<span style="color: #3B82F6;">Dash</span> es un proyecto open source desarrollado por Genaro Hernández con licencia [MIT](https://opensource.org/licenses/MIT). Utilizalo a tu gusto.
+
+## Apoya el proyecto
+Hola devs 👋, gracias por considerar hacer una donación, para poder seguir trabajando en contribuir en futuras actualizaciones del proyecto.
+
+<a href="https://www.buymeacoffee.com/genarohernandez"><img src="https://img.buymeacoffee.com/button-api/?text=Cómprame un café&emoji=&slug=genarohernandez&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
+<style>
+    a{
+        color: #3B82F6;
+    }
+    a:hover{
+        color: blue;
+    }
+    h2{
+        font-weight: bold;
+        color: #3B82F6;
+    }
+</style>

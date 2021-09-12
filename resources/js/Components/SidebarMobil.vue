@@ -1,5 +1,5 @@
 <template>
-  hola desde mobil sidebar
+  hola desde mobil sidebar, puedes personalizarlo como gustes
 </template>
 
 <script>

@@ -16,7 +16,7 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    CHARTS
+                    GRÁFICOS <i class="lowercase">(pendiente)</i>
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -24,7 +24,7 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    CALENDARIO
+                    CALENDARIO <i class="lowercase">(pendiente)</i>
                 </span>
             </Link>
             <Link class="w-full justify-start linkClass" href="#">
@@ -32,7 +32,7 @@
                     <IconItem/>
                 </span>
                 <span class="mx-4 text-xs font-normal">
-                    PUNTO DE VENTA
+                    TAREAS <i class="lowercase">(pendiente)</i>
                 </span>
             </Link>
             <p class="p-3 text-xs uppercase text-gray-400">CRUD</p>

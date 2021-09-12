@@ -2,8 +2,11 @@
     <LaraDashLayout>
         <Head title="Permisos"/>
         <div class="flex justify-between mb-2">
-            <h2 class="dark:text-white">Permisos</h2>
+            <h2 class="my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200">
+                Permisos
+            </h2>
         </div>
+        <GitHub/>
         <LaraDashTable class="mb-6">
             <template #col>
                 <th class="px-4 py-3 text-xs">ID</th>
@@ -24,8 +27,9 @@
 <script setup>
     // importaciones
     import LaraDashLayout from '@/Layouts/Laradash'
-    import { Head } from '@inertiajs/inertia-vue3';
+    import { Head } from '@inertiajs/inertia-vue3'
     import LaraDashTable from '@/Components/Table'
+    import GitHub from '@/Components/GitHub'
     // declaraciones
     const props = defineProps({
         permisos: Object
