@@ -5,6 +5,7 @@
             <h2 class="my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200">
                 Mi Perfil
             </h2>
+            <button onclick="history.back()">retornar</button>
         </div>
         <GitHub/>
         <div class="flex flex-col flex-wrap sm:flex-row">

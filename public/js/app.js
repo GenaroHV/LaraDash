@@ -22652,7 +22652,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
     href: _ctx.route('usuarios.index'),
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-full justify-start", _ctx.$page.url === '/usuarios' ? 'linkClassActive' : 'linkClass'])
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["w-full justify-start", _ctx.$page.url.startsWith('/usuarios') ? 'linkClassActive' : 'linkClass'])
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["IconItem"])]), _hoisted_21];
@@ -27114,7 +27114,9 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "flex justify-between mb-2"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
   "class": "my-3 text-2xl font-semibold text-gray-600 dark:text-gray-200"
-}, " Mi Perfil ")], -1
+}, " Mi Perfil "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  onclick: "history.back()"
+}, "retornar")], -1
 /* HOISTED */
 );
 
@@ -28701,13 +28703,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  install: function install(app, options) {
+  install: function install(app) {
     app.mixin({
       mounted: function mounted() {
-        var authRoles = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.value.auth.roles;
-        var authPermissions = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.value.auth.permisos;
-        this.$gates.setRoles(authRoles);
-        this.$gates.setPermissions(authPermissions);
+        var authRoles = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.value.auth;
+        var authPermissions;
+
+        if (authRoles !== null) {
+          authRoles = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.value.auth.roles;
+          authPermissions = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.value.auth.permisos;
+          this.$gates.setRoles(authRoles);
+          this.$gates.setPermissions(authPermissions);
+        }
       }
     });
   }

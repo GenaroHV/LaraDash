@@ -62,7 +62,7 @@
             </Link>
             <p class="p-3 text-xs uppercase text-gray-400">Others</p>
             <Link :href="route('usuarios.index')" class="w-full justify-start"
-                :class="$page.url === '/usuarios' ? 'linkClassActive' : 'linkClass'">
+                :class="$page.url.startsWith('/usuarios') ? 'linkClassActive' : 'linkClass'">
                 <span class="text-left">
                     <IconItem/>
                 </span>
