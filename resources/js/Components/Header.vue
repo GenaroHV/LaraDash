@@ -80,7 +80,7 @@ import JetDropdownLink from '@/Jetstream/DropdownLink'
 import { Inertia } from '@inertiajs/inertia'
 import { ref } from 'vue'
 const emit = defineEmits(['menu','mobil'])
-const estadoMenuIcon = ref(false)
+const estadoMenuIcon = ref(true)
 const abriMenu = () => {
     emit('menu')
     estadoMenuIcon.value = !estadoMenuIcon.value

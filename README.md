@@ -41,7 +41,7 @@ Solo debes de clonar el proyecto Lara<span style="color: #3B82F6;">Dash</span> o
 
 ## Créditos
 
-Lara<span style="color: #3B82F6;">Dash</span> no hubiera sido posible sin la necesidad de tener un proyecto base en el cual empezar a construir cada imaginación.
+Lara<span style="color: #3B82F6;">Dash</span> no hubiera sido posible sin la necesidad de tener un proyecto base en el cual empezar a construir cada imaginación. Para el UI me base en el [Dashboard and admin templates](https://www.tailwind-kit.com/templates/dashboard). Para la los roles y permisos del backend en [Laravel Permission](https://spatie.be/docs/laravel-permission/v5/introduction) y en el fronted en [Vue Gates](https://williamcruzme.github.io/vue-gates/#/).
 
 ## [Genaro Hernández](https://genarohernandez.pro/)
 

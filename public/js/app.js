@@ -19219,7 +19219,7 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose,
         emit = _ref.emit;
     expose();
-    var estadoMenuIcon = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)(false);
+    var estadoMenuIcon = (0,vue__WEBPACK_IMPORTED_MODULE_4__.ref)(true);
 
     var abriMenu = function abriMenu() {
       emit('menu');
